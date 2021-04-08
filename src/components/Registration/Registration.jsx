@@ -33,7 +33,6 @@ export class Registration extends Component {
     } = this.props.match;
     console.log(eventId);
     const event = events.find((event) => event.id === +eventId);
-    console.log(event);
     if (event) {
       this.setState({
         event,
@@ -50,7 +49,7 @@ export class Registration extends Component {
     e.preventDefault();
     let user = {
       ...this.state,
-      totalPrice:
+      price:
         (+this.state.adultsCount + +this.state.childCount) * 100 +
         +this.state.food,
     };
