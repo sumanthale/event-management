@@ -13,12 +13,13 @@ const UserModel = {
 };
 const User = mongoose.model('User', UserModel);
 
-const sumanth = new User({
-  name: 'sumanth',
-  email: 'sumanthale@gmail.com',
-});
+app.get('', async (req, res) => {
+  // sumanth.save();
 
-// sumanth.save();
+  const data = await User.find();
+  res.send(data);
+});
+app.post('');
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
