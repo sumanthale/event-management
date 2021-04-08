@@ -12,7 +12,7 @@ let events = [
     id: 2,
     name: 'Ugadi',
 
-    date: '2021-01-01',
+    date: '2021-01-02',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -21,7 +21,7 @@ let events = [
   {
     id: 3,
     name: 'Christmas',
-    date: '2021-01-01',
+    date: '2021-01-03',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -30,7 +30,7 @@ let events = [
   {
     id: 4,
     name: 'A',
-    date: '2021-01-01',
+    date: '2021-01-04',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -39,7 +39,7 @@ let events = [
   {
     id: 5,
     name: 'B',
-    date: '2021-01-01',
+    date: '2021-01-05',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -48,7 +48,7 @@ let events = [
   {
     id: 6,
     name: 'C',
-    date: '2021-01-01',
+    date: '2021-01-06',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -57,7 +57,7 @@ let events = [
   {
     id: 7,
     name: 'D',
-    date: '2021-01-01',
+    date: '2021-01-07',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -66,7 +66,7 @@ let events = [
   {
     id: 8,
     name: 'E',
-    date: '2021-01-01',
+    date: '2021-01-08',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -75,7 +75,7 @@ let events = [
   {
     id: 9,
     name: 'F',
-    date: '2021-01-01',
+    date: '2021-01-10',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -84,7 +84,7 @@ let events = [
   {
     id: 10,
     name: 'G',
-    date: '2021-01-01',
+    date: '2021-01-11',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -93,7 +93,7 @@ let events = [
   {
     id: 11,
     name: 'H',
-    date: '2021-01-01',
+    date: '2021-01-12',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -102,7 +102,7 @@ let events = [
   {
     id: 12,
     name: 'I',
-    date: '2021-01-01',
+    date: '2021-01-13',
     price: 100,
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -128,5 +128,13 @@ export const getEvent = (id) => {
 };
 export const getEvents = () => {
   return events;
+};
+
+export const filterByDate = (from, to) => {
+  return events.filter(
+    (event) =>
+      new Date(event.date) >= new Date(from) &&
+      new Date(event.date) <= new Date(to)
+  );
 };
 export default events;

@@ -11,3 +11,12 @@
   height: 200px;
   text-align: center;
 }
+.qr-stamp {
+  position: relative;
+}
+.ticket-stamp {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+}
