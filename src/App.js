@@ -8,14 +8,15 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Home from './components/Home/Home';
-import Events from './components/Home/Events';
-import EditEvent from './components/Home/EditEvent';
+import Home from './components/All/Home';
+import Events from './components/All/Events';
+import EditEvent from './components/All/EditEvent';
 import { useEffect, useState } from 'react';
-import Admin from './components/Home/Admin';
+import Admin from './components/All/Admin';
 
 function App() {
-  const [admin, setAdmin] = useState();
+  const [admin, setAdmin] = useState('');
+
   useEffect(() => {
     const isadmin = localStorage.getItem('admin');
     setAdmin(isadmin);
@@ -55,6 +56,7 @@ function App() {
 export default App;
 
 const CustomRoute = (props) => {
+  console.log(props);
   const admin = localStorage.getItem('admin');
   if (admin) {
     return <Route {...props} />;
